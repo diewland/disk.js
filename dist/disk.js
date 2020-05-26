@@ -1,5 +1,7 @@
 let Disk = {
 
+  version: '0.0.1',
+
   get: (key, default_value = null) => {
     let val = localStorage.getItem(key);
     if (!val) return default_value;
