@@ -1,6 +1,6 @@
 let Disk = {
 
-  version: '0.0.1',
+  version: '0.0.2',
 
   get: (key, default_value = null) => {
     let val = localStorage.getItem(key);
@@ -12,6 +12,8 @@ let Disk = {
     let json_str = JSON.stringify(value);
     localStorage.setItem(key, json_str);
     return value;
-  }
+  },
+
+  remove: (key) => localStorage.removeItem(key),
 
 };
